@@ -1,0 +1,93 @@
+.tool-box-register-title{
+    font-size: 16px;
+}
+.w-5 {
+    width: 5%;
+}
+.w-10 {
+    width: 10%;
+}
+.w-15 {
+    width: 15%;
+}
+.w-20 {
+    width: 20%;
+}
+.w-25 {
+    width: 25%;
+}
+.w-30 {
+    width: 30%;
+}
+.w-35 {
+    width: 35%;
+}
+.w-40 {
+    width: 40%;
+}
+.w-50 {
+    width: 50%;
+}
+.w-60 {
+    width: 60%;
+}
+.w-65 {
+    width: 65%;
+}
+.w-70 {
+    width: 70%;
+}
+.w-80 {
+    width: 80%;
+}
+.w-90 {
+    width: 90%;
+}
+.w-100 {
+    width: 100%;
+}
+.icon-gatwick-image {
+    background-image: url(../img/gatwick.png);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    width: 250px;
+    background-size: 100%;
+    background-position: center top;
+    height: 37px;
+}
+.gatwick, .no-border{
+    border: none !important;
+}
+.tab{
+    width: 100%;
+   /* height: 36px;*/
+}
+.CITB-60,.CITB-20{
+    border-right: 1px solid #000000;
+    height: 45px
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #0e0e0e;
+}
+.toolbox-talk-register-content{
+    font-size: 14px;
+}
+.conform-text{
+    text-align: center;
+    font-size: 12px;
+}
+.reference-purpose{
+    text-align: center;
+}
+.tool-box-talk-table .table tr th{
+    background-color: #508edb !important;
+}
+
+.margin {
+    margin-left: 150px;
+    position: absolute;
+    top: 60px;
+    right: -130px;
+    height: 36px;
+    width: 420px;
+}

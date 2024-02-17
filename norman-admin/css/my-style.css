@@ -1,0 +1,189 @@
+.norman-image{
+    text-align: center;
+    padding: 10px;
+}
+.norman-scaffolding{
+    width: 50%;
+    height: 50%;
+}
+.main_menu{
+    margin-top: 25px;
+}
+.panel{
+    margin-top: 84px;
+    -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+}
+.profile-img{
+    text-align: center;
+    margin-top: 40px;
+}
+.logo {
+    width: 200px;
+    margin-bottom: 50px;
+    margin-top: 0px;
+}
+.btn-warning {
+    color: #fff;
+    background-color: #00a0dd !important;
+    border-color: #00a0dd !important;
+}
+.panel-content{
+    margin-top: 17px;
+    margin-bottom: 20px;
+    padding: 7px;
+    height: 430px;
+}
+.sign-in-button {
+    margin-top: 40px !important;
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+span.required{
+	color:red;
+}
+.validationMessage{
+	color:red;
+}
+.check-error td{
+	border-color : #D9180B !important;
+}
+/*------------------------------------------dashboard-page-started-------------------------------------------*/
+.report-overview,.registration-report-title,.event-report-title h4{
+    text-align: center;
+}
+.report-overview,.new-registration,.new-event{
+    margin-top: 10px;
+    margin-bottom: 11px;
+    padding: 5px;
+}
+.register-event{
+    margin-top: 30px;
+}
+
+.report-overview{
+    border: 1px solid #ddd;
+    background-color: #2D257B;
+    color: #FFFFFF;
+    padding: 10px;
+}
+.registration-reports,.event-reports{
+    border: 1px solid #ddd;
+}
+.registration-report-title,.event-report-title{
+    background-color: #2D257B;
+    color: white;
+    padding: 1px;
+}
+
+/*------------------------------------------/dashboard-page-ended-------------------------------------------*/
+
+/*------------------------------------------user management page-------------------------------------------*/
+.user-profile-img{
+	height		: 150px;
+	width		: 150px;
+	border-radius : 150px;
+	padding		: 5px;
+}
+.lblUserName{
+	font-weight	: bold;
+	font-size	: 25px;
+	color		: #2D257B;
+}
+.user-signature{
+	width 	: 150px;
+	height 	: 150px;
+	border 	: 1px solid;
+}
+img.profile-sm {
+    width				: 50px;
+    height				: 50px;
+	border				: 1px solid;
+	border-radius 		: 50%;
+    -webkit-transition	: all .2s ease-in-out;
+    -moz-transition		: all .2s ease-in-out;
+    -o-transition		: all .2s ease-in-out;
+    -ms-transition		: all .2s ease-in-out;
+}
+.profile-transition {
+    -webkit-transform	: scale(2.2); 
+    -moz-transform		: scale(2.2);
+    -o-transform		: scale(2.2);
+    transform			: scale(2.2);
+	overflow			: visible;
+}
+/*------------------------------------------/user management page-------------------------------------------*/
+
+/*------------------------------------------site management page-------------------------------------------*/
+.assign-user-img{
+	height		: 50px;
+	width		: 50px;
+	border-radius : 50px;
+}
+/*------------------------------------------/site management page-------------------------------------------*/
+
+/*------------------------------------------Loader on data processing start-------------------------------------------*/
+.ajax-loader {
+	background: rgba(255, 255, 255, 0.698) none repeat scroll 0 0;
+	height: 100%;
+	margin: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 100000000000000000;
+}
+.ajax-loader img {
+	position:absolute;
+	z-index: 100000000000000000;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	margin:auto;
+}
+/*------------------------------------------/Loader on data processing end-------------------------------------------*/
+
+/*------------------------------------------slider page start-------------------------------------------*/
+img.preview-img {
+    width	: 200px;
+    height	: 100px;
+    -webkit-transition	: all .2s ease-in-out;
+    -moz-transition		: all .2s ease-in-out;
+    -o-transition		: all .2s ease-in-out;
+    -ms-transition		: all .2s ease-in-out;
+}
+.transition {
+    -webkit-transform	: scale(2.2); 
+    -moz-transform		: scale(2.2);
+    -o-transform		: scale(2.2);
+    transform			: scale(2.2);
+	overflow			: visible;
+	padding-bottom		: 20px !important;
+	margin-bottom		: 20px !important;
+	margin-left			: 20px !important;
+	padding-left		: 20px !important;
+}
+.slider-thumbnail{
+	width:425px;
+}
+/*------------------------------------------/slider page start-------------------------------------------*/
+
+
+/*------------------------------------------menu assignment page start-------------------------------------------*/
+.profile-image{
+	width : 85px;
+	height: 85px;
+	padding : 10px;
+}
+/*------------------------------------------/menu assignment page end-------------------------------------------*/
+
+/*------------------------------------------form assignment page end-------------------------------------------*/
+/*------------------------------------------/form assignment page end-------------------------------------------*/
+
+td button {
+    cursor: default;
+}

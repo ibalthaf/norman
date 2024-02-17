@@ -1,0 +1,144 @@
+@page{
+	margin: 10px 10px 10px 10px; 
+}
+.w-1 {
+    width: 1%;
+}
+
+.w-2 {
+    width: 2%;
+}
+.w-3 {
+    width: 3%;
+}
+.w-4 {
+    width: 4%;
+}
+.w-5 {
+    width: 5%;
+}
+.w-6 {
+    width: 6%;
+}
+.w-7 {
+    width: 7%;
+}
+.w-8 {
+    width: 8%;
+}
+.w-10 {
+    width: 10%;
+}
+.w-15 {
+    width: 15%;
+}
+.w-20 {
+    width: 20%;
+}
+.w-25 {
+    width: 25%;
+}
+.w-30 {
+    width: 30%;
+}
+.w-35 {
+    width: 35%;
+}
+.w-40 {
+    width: 40%;
+}
+.w-50 {
+    width: 50%;
+}
+.w-60 {
+    width: 60%;
+}
+.w-65 {
+    width: 65%;
+}
+.w-70 {
+    width: 70%;
+}
+.w-80 {
+    width: 80%;
+}
+.w-90 {
+    width: 90%;
+}
+.w-100 {
+    width: 100%;
+}
+body{
+	margin: 0px;
+    color: #000 !important;
+    font-size: 14px;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif  !important;
+}
+table
+{
+    font-family: Arial,Helvetica Neue,Helvetica,sans-serif !important;
+}
+
+.header {
+    height: 70px;
+}
+
+.title h3
+{
+    font-family: inherit;
+    font-weight: 600;
+
+}
+.logo_div.w-100 {
+    text-align: center;
+}
+img.logo {
+
+    width: 200px;
+
+}
+
+.header th {
+    border: 0px solid black;
+}
+.header tr{
+    height: 50px;
+
+}
+
+table{
+    width: 100%;
+}
+
+table tr td {
+    border: 1px solid black;
+}
+th {
+    border: 1px solid black;
+    color: #ffffff !important;
+}
+
+td{
+    height: 20px;
+}
+thead.height
+{
+    height: 30px;
+    background-color: #17375E;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.cls_th
+{
+    padding:5px;
+    font-weight: 800;
+}
+
+.FormTitle
+{
+    padding: 0px 0px 3px 15px;
+    color: #000 !important;
+    margin-bottom: 10px;
+    text-align: center;
+}

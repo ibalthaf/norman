@@ -1,0 +1,128 @@
+.Manger-supervisor-site-report h1{
+    text-align: center;
+}
+.w-10 {
+    width: 10%;
+}
+.w-20 {
+    width: 20%;
+}
+.w-25 {
+    width: 25%;
+}
+.w-30 {
+    width: 30%;
+}
+.w-35 {
+    width: 35%;
+}
+.w-40 {
+    width: 40%;
+}
+.w-50 {
+    width: 50%;
+}
+.w-60 {
+    width: 60%;
+}
+.w-65 {
+    width: 65%;
+}
+.w-70 {
+    width: 70%;
+}
+.w-80 {
+    width: 80%;
+}
+.w-90 {
+    width: 90%;
+}
+.w-100 {
+    width: 100%;
+}
+.sign-1 {
+    width: 33.2%;
+}
+.sign-2 {
+    width: 66.8%;
+}
+.logo{
+    text-align: center;
+}
+.logo img{
+    margin: 0 auto;
+    display: inline-block;
+    width: 150px;
+    padding: 5px;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 1px 7px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    font-size: 11px;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border-bottom-width: 2px;
+    font-size: 8px;
+    background-color:#538dd5;
+    color: #000000;
+}
+.table-bordered>thead>tr>th{
+    position: relative;
+}
+.title{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+.rotate{
+    white-space: nowrap;
+    display: block;
+    text-decoration: none;
+    padding-left: 0px;
+    padding-right: 0px;
+    line-height: 40px;
+    position: absolute;
+    top: 47px;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: 20px;
+    -moz-transform: rotate(-90deg);
+    -moz-transform-origin: 20px;
+    -ms-transform: rotate(-90deg);
+    -ms-transform-origin: 20px;
+    -o-transform: rotate(-90deg);
+    -o-transform-origin: 20px;
+    transform: rotate(-90deg);
+    transform-origin: 20px;
+    font-size: 7px;
+}
+.table-1{
+    height: 30px;
+}
+.straight{
+    line-height: 90px;
+    height: 90px;
+    text-align: center;
+}
+p{
+    font-weight: bold;
+}
+.sitename-report{
+    padding-top: 10px;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #080707;
+}
+.col-md-6 {
+    width: 50%;
+}
+.table.no-border>tbody>tr>td{
+    border: none !important;
+	font-size: 10px !important;
+}

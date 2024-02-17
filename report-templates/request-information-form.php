@@ -1,0 +1,116 @@
+<?php
+	require '../includes/db.php';
+//initiate db
+	$db = getDB();
+?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Norman Scaffolding</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- themestyle -->
+		<link href="css/report-templates/site-supervisor.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<div class="header w-100">
+				<table>
+					<tr>
+						<th class="w-100">
+							<div class="logo_div w-100">
+								<img class="logo" src="images/Norman-Group-logo-4.png">
+							</div>
+						</th>
+					</tr>
+				</table>
+			</div>
+			<div class="FormTitle">
+				<h5 style="color:#000;font-size: large;"><strong><b>REQUEST FOR INFORMATION (RFI) FORM </b></strong></h5>
+			</div>
+			<div class="handover_form">
+				<?php
+					$site_visibility = 1;
+				//check date
+					if(empty($_GET["to"])):
+					//check user type
+						if($_GET["usertype"]==0):
+						//select data
+							$sql	= "SELECT REPORT.*, SITE.`site_name` AS sitename, SITE.`site_owner_name` AS ownername,  DATE_FORMAT(REPORT.rform_createdon, '%d/%m/%Y') AS createdon, CONCAT(USERS.`user_first_name`, ' ', USERS.`user_last_name`) AS inspectedby, PDF.`pdf_name` AS pdfname FROM `nman_request_information_form` AS REPORT INNER JOIN `nman_user_master` AS USERS On USERS.`pk_user_id`=REPORT.`fk_user_id` INNER JOIN `nman_site_master` AS SITE ON SITE.`pk_site_id`=REPORT.`fk_site_id` LEFT JOIN `nman_pdf_master` AS PDF ON PDF.`pdf_key`=REPORT.`pdf_key` WHERE REPORT.`rform_visibility`=:rform_visibility AND REPORT.`work_type`=:work_type";
+						//prepare statement
+							$stmt = $db->prepare($sql);
+								$stmt->bindParam("work_type"		, $_GET["worktype"]);
+								$stmt->bindParam("rform_visibility"	, $site_visibility);
+							$stmt->execute();
+						else:
+						//select data
+							$sql	= "SELECT REPORT.*, SITES.`site_name` AS sitename, SITES.`site_owner_name` AS ownername,  DATE_FORMAT(REPORT.rform_createdon, '%d/%m/%Y') AS createdon, CONCAT(USERS.`user_first_name`, ' ', USERS.`user_last_name`) AS inspectedby, PDF.`pdf_name` AS pdfname FROM `nman_site_assignment` AS ASSIGN INNER JOIN `nman_site_master` AS SITES ON SITES.`pk_site_id`=ASSIGN.`fk_site_id` AND SITES.`site_visibility`=:site_visibility INNER JOIN `nman_request_information_form` AS REPORT INNER JOIN `nman_user_master` AS USERS On USERS.`pk_user_id`=REPORT.`fk_user_id` LEFT JOIN `nman_pdf_master` AS PDF ON PDF.`pdf_key`=REPORT.`pdf_key` WHERE ASSIGN.`fk_user_id`=:fk_user_id AND REPORT.`work_type`=:work_type";
+						//prepare statement
+							$stmt = $db->prepare($sql);
+								$stmt->bindParam("work_type"		, $_GET["worktype"]);
+								$stmt->bindParam("site_visibility"	, $site_visibility);
+								$stmt->bindParam("fk_user_id"		, $_GET["userid"]);
+							$stmt->execute();
+						endif;
+					else:
+					//check user type
+						if($reqData->usertype==0):
+						//select data
+							$sql	= "SELECT REPORT.*, SITE.`site_name` AS sitename, SITE.`site_owner_name` AS ownername, DATE_FORMAT(REPORT.rform_createdon, '%d/%m/%Y') AS createdon, CONCAT(USERS.`user_first_name`, ' ', USERS.`user_last_name`) AS inspectedby, PDF.`pdf_name` AS pdfname FROM `nman_request_information_form` AS REPORT INNER JOIN `nman_user_master` AS USERS ON USERS.`pk_user_id`=REPORT.`fk_user_id` INNER JOIN `nman_site_master` AS SITE ON SITE.`pk_site_id`=REPORT.`fk_site_id` LEFT JOIN `nman_pdf_master` AS PDF ON PDF.`pdf_key`=REPORT.`pdf_key` WHERE DATE(REPORT.`rform_createdon`)>=:startdate AND DATE(REPORT.`rform_createdon`)<=:enddate AND REPORT.`rform_visibility`=:rform_visibility AND REPORT.`work_type`=:work_type";
+						//prepare statement
+							$stmt = $db->prepare($sql);
+								$stmt->bindParam("work_type"		, $_GET["worktype"]);
+								$stmt->bindParam("rform_visibility"	, $site_visibility);
+								$stmt->bindParam("startdate"		, date("Y-m-d", strtotime($_GET["from"])));
+								$stmt->bindParam("enddate"			, date("Y-m-d", strtotime($_GET["to"])));
+							$stmt->execute();
+						else:
+						//select data
+							$sql	= "SELECT REPORT.*, SITES.`site_name` AS sitename, SITES.`site_owner_name` AS ownername,  DATE_FORMAT(REPORT.rform_createdon, '%d/%m/%Y') AS createdon, CONCAT(USERS.`user_first_name`, ' ', USERS.`user_last_name`) AS inspectedby, PDF.`pdf_name` AS pdfname FROM `nman_site_assignment` AS ASSIGN INNER JOIN `nman_site_master` AS SITES ON SITES.`pk_site_id`=ASSIGN.`fk_site_id` AND SITES.`site_visibility`=:site_visibility INNER JOIN `nman_request_information_form` AS REPORT INNER JOIN `nman_user_master` AS USERS On USERS.`pk_user_id`=REPORT.`fk_user_id` AND DATE(REPORT.`rform_createdon`)>=:startdate AND DATE(REPORT.`rform_createdon`)<=:enddate LEFT JOIN `nman_pdf_master` AS PDF ON PDF.`pdf_key`=REPORT.`pdf_key` WHERE ASSIGN.`fk_user_id`=:fk_user_id AND REPORT.`work_type`=:work_type";
+						//prepare statement
+							$stmt = $db->prepare($sql);
+								$stmt->bindParam("work_type"		, $_GET["worktype"]);
+								$stmt->bindParam("startdate"		, date("Y-m-d", strtotime($_GET["from"])));
+								$stmt->bindParam("enddate"			, date("Y-m-d", strtotime($_GET["to"])));
+								$stmt->bindParam("site_visibility"	, $site_visibility);
+								$stmt->bindParam("fk_user_id"		, $_GET["userid"]);
+							$stmt->execute();
+						endif;
+					endif;
+				//fetch data
+					$fetchData 	= $stmt->fetchAll(PDO::FETCH_ASSOC);
+				?>
+				<table class="w-100" cellpadding="5px">
+					<thead class="height">
+						<tr>
+							<th class="w-5 cls_th text-center">No</th>
+							<th class="w-20 cls_th text-center">Date</th>
+							<th class="w-25 cls_th text-center">Site</th>
+							<th class="w-25 cls_th text-center">Client</th>
+							<th class="w-25 cls_th text-center">Form Completed By</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php
+							foreach($fetchData AS $key=>$rows):
+						?>
+						<tr>
+							<td class="text-center"><?php echo ($key+1) ?></td>
+							<td class="text-center"><?php echo $rows["createdon"]; ?></td>
+							<td class="text-center"><?php echo $rows["sitename"]; ?></td>
+							<td class="text-center"><?php echo $rows["ownername"]; ?></td>
+							<td class="text-center"><?php echo $rows["inspectedby"]; ?></td>
+						</tr>
+						<?php
+							endforeach;
+						?>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

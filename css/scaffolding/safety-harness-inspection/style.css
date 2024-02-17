@@ -1,0 +1,179 @@
+@page{
+	margin: 5px 50px 50px 5px;
+}
+body{
+	margin: 0px;
+    color: #000 !important;
+    font-size: 14px;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif  !important; 
+}
+.Manger-supervisor-site-report h1{
+    text-align: center;
+}
+.w-1 {
+    width: 1%;
+}
+
+.w-2 {
+    width: 2%;
+}
+.w-3 {
+    width: 3%;
+}
+.w-4 {
+    width: 4%;
+}
+.w-5 {
+    width: 5%;
+}
+.w-6 {
+    width: 6%;
+}
+.w-7 {
+    width: 7%;
+}
+.w-8 {
+    width: 8%;
+}
+.w-10 {
+    width: 10%;
+}
+.w-20 {
+    width: 20%;
+}
+.w-25 {
+    width: 25%;
+}
+.w-30 {
+    width: 30%;
+}
+.w-35 {
+    width: 35%;
+}
+.w-40 {
+    width: 40%;
+}
+.w-50 {
+    width: 50%;
+}
+.w-60 {
+    width: 60%;
+}
+.w-65 {
+    width: 65%;
+}
+.w-70 {
+    width: 70%;
+}
+.w-80 {
+    width: 80%;
+}
+.w-90 {
+    width: 90%;
+}
+.w-100 {
+    width: 100%;
+}
+.sign-1 {
+    width: 33.2%;
+}
+.sign-2 {
+    width: 66.8%;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    font-size: 9px;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border-bottom-width: 2px;
+    font-size: 8px;
+    color: #000000;
+}
+.rotate {
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    width: 1.5em;
+}
+.rotate div {
+    -moz-transform: rotate(-90.0deg);  /* FF3.5+ */
+    -o-transform: rotate(-90.0deg);  /* Opera 10.5 */
+    -webkit-transform: rotate(-90.0deg);  /* Saf3.1+, Chrome */
+    filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
+    margin-left: -10em;
+    margin-right: -10em;
+    margin-top: 3em;
+}
+.table-1{
+    height: 40px;
+}
+.straight {
+    line-height: 34px;
+    height: 73px;
+    text-align: center;
+}
+.straight-new {
+    line-height: 34px;
+    height: 49px;
+    text-align: center;
+}
+p{
+    font-weight: bold;
+}
+.sitename-report{
+    padding-top: 10px;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #080707;
+}
+.col-md-6 {
+    width: 50%;
+}
+.table.no-border>tbody>tr>td{
+    border: none !important;
+}
+.table.init-table>tbody>tr>td{
+    font-size: 10px;
+}
+.dark{
+    font-size: 12px;
+    text-align: center;
+}
+.icon-gatwick-image img{
+    overflow: hidden;
+    background-repeat: no-repeat;
+    width: 250px;
+    background-size: 100%;
+    background-position: center top;
+    height: 37px;
+}
+#footer { 
+	position: fixed; 
+	left: 0px; 
+	bottom: -180px; 
+	right: 0px; 
+	height: 150px;
+	font-size : 8px;
+}
+.no-record-found{
+	font-size : 40px;
+	color:red !important;
+	background-color : #EEEEEE;
+	border : 1px solid;
+	border-color: black;
+	border-radius : 10px;
+}
+.table-1 th
+{
+	text-align:center;
+	line-height: 40px;
+	margin-bottom:10px !important;
+}
