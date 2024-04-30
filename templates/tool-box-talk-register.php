@@ -20,18 +20,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Norman Scaffolding</title>
-		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<?php
 			$logo = "";
 			if($_GET["worktype"]==1):
-				$logo = "../images/Norman-Group-logo-4.png";
+				$logo = "images/Norman-Group-logo-4.png";
 		?>
-		<link href="../css/scaffolding/tool-box-talk-register/style.css" type="text/css" rel="stylesheet">
+		<link href="css/scaffolding/tool-box-talk-register/style.css" type="text/css" rel="stylesheet">
 		<?php
 			else:
-				$logo = "../images/Norman-Group-logo-5.png";
+				$logo = "images/Norman-Group-logo-5.png";
 		?>
-		<link href="../css/brickwork/tool-box-talk-register/style.css" type="text/css" rel="stylesheet">
+		<link href="css/brickwork/tool-box-talk-register/style.css" type="text/css" rel="stylesheet">
 		<?php
 			endif;
 		?>
@@ -88,7 +88,7 @@
 					<td class="w-25">
 						<div class="input2"><?php echo $fetchmst["topic"]; ?></div>
 					</td>
-					<td class="w-15" style="text-align:center;">GT700 / NG Nr</td>
+					<td class="w-15" style="text-align:center;">CITB GT 700 No</td>
 					<td class="w-20">
 						<div class="input2"><?php echo $fetchmst["citp_gt"]; ?></div>
 					</td>
@@ -152,7 +152,7 @@
 			</tbody>
 		</table>
 
-		<!-- <p style="text-align:center;">I confirm that the above persons have attended the toolbox talk.</p>
+		<p style="text-align:center;">I confirm that the above persons have attended the toolbox talk.</p>
 		<?php
 			$sltsql 	= "SELECT `type_name` FROM `nman_user_master` AS USER INNER JOIN `nman_user_types` AS TYPE ON TYPE.pk_type_id=USER.fk_type_id WHERE `pk_user_id`=:pk_user_id";
 		//execute query
@@ -175,45 +175,27 @@
 					</td>
 				</tr>
 			</tbody>
-		</table> -->
-		<!-- <strong>
+		</table>
+		<strong>
 			<p style="text-align:center;">This form to be returned to main office and retained on file for reference purposes.</p>
-		</strong> -->
+		</strong>
 		<div class="w-100 mainBorder">
 			<div class="innerColor">
-				I confirm that the above persons have attended the toolbox talk.  
+				SIGNATURE  
 			</div>
 			<div class="inputBack">
-				<div class="w-100" style="display:flex; flex-direction:row; justify-content: space-between;">
-					<div style="display:flex; flex-direction:column;">
-						<p class="" style="padding-left:10px; padding-top:10px; width:180px;">
-							<strong>Delivered By: <?php echo $siteData["user_first_name"]." ".$siteData["user_last_name"]; ?></strong>
-						</p>
-						<p class="" style="padding-left:10px; padding-top:10px; width:180px;">
-							<strong>Position: <?php echo $fetchType["type_name"]; ?></strong>
-						</p>
-					</div>
-					<div style="display:flex; flex-direction:row;">
-						<p class="" style="padding:23px; width:80px;">
-							<strong>Signature</strong>
-						</p>
-						<div class="input1 text-center" style="background:#fff; margin:8px">
-							<img src="<?php echo "data:image/png;base64,".$siteData["user_signature"]; ?>" width="75px" height="40px" />
-						</div>
-					</div>
-				</div>
-				<!-- <table class="w-100">
+				<table class="w-100">
 					<tbody>
 						<tr>
-								<td class="w-10"><strong>Signature</strong></td>
-								<td>
-									<div class="input1 text-center" style="background:#fff;">
-										<img src="<?php echo "data:image/png;base64,".$siteData["user_signature"]; ?>" width="75px" height="40px" />
-									</div>
-								</td>
+							<td class="w-10"><strong>Signature</strong></td>
+							<td>
+								<div class="input1 text-center" style="background:#fff;">
+									<img src="<?php echo "data:image/png;base64,".$siteData["user_signature"]; ?>" width="75px" height="40px" />
+								</div>
+							</td>
 						</tr>
 					</tbody>
-				</table> -->
+				</table>
 			</div>
 		</div>
 	<!-- image -->
